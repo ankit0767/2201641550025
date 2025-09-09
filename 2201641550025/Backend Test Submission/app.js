@@ -31,7 +31,6 @@ function generateShortCode() {
 // --- API Endpoints ---
 
 // 1. Endpoint to Create a new Short URL
-// 1. Endpoint to Create a new Short URL
 app.post('/shorturls', (req, res) => {
   Log("backend", "info", "handler", "Request received to create a short URL.");
   const { url, shortcode, validity } = req.body;
@@ -85,7 +84,7 @@ app.post('/shorturls', (req, res) => {
 });
 
 
-// 2. Endpoint to Redirect to the Original URL and Record the Click
+
 // 2. Endpoint to Redirect to the Original URL and Record the Click
 app.get('/:shortcode', (req, res) => {
   Log("backend", "info", "handler", `Redirect request received for shortcode: ${req.params.shortcode}`);
