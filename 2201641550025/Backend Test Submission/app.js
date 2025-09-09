@@ -119,7 +119,7 @@ app.get('/:shortcode', (req, res) => {
   };
   clicks.push(newClick); // Save the click to our "database"
 
-  // --- Redirect the User ---
+  /
   // Send the user to the original long URL
   Log("backend", "info", "handler", `Redirecting ${shortcode} to ${urlObject.original_url}`);
   return res.redirect(302, urlObject.original_url);
